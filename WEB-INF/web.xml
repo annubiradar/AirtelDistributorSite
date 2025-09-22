@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <display-name>AirtelDistributorSite</display-name>
+
+    <!-- Request Form Submission -->
+    <servlet>
+        <servlet-name>RequestServlet</servlet-name>
+        <servlet-class>com.airtel.servlet.RequestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RequestServlet</servlet-name>
+        <url-pattern>/submitRequest</url-pattern>
+    </servlet-mapping>
+
+    <!-- Admin Login -->
+    <servlet>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <servlet-class>com.airtel.servlet.AdminLoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <url-pattern>/adminLogin</url-pattern>
+    </servlet-mapping>
+
+    <!-- Add Broadband -->
+   <servlet>
+    <servlet-name>AddBroadbandServlet</servlet-name>
+    <servlet-class>com.airtel.servlet.AddBroadbandServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>AddBroadbandServlet</servlet-name>
+    <url-pattern>/admin/addBroadband</url-pattern>
+</servlet-mapping>
+
+    <!-- Add DTH -->
+   <servlet>
+    <servlet-name>AddDTHServlet</servlet-name>
+    <servlet-class>com.airtel.servlet.AddDTHServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>AddDTHServlet</servlet-name>
+    <url-pattern>/admin/addDTH</url-pattern>
+</servlet-mapping>
+
+
+
+    <!-- Add Recharge -->
+    <servlet>
+        <servlet-name>AddRechargeServlet</servlet-name>
+        <servlet-class>com.airtel.servlet.AddRechargeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddRechargeServlet</servlet-name>
+        <url-pattern>/admin/addRecharge</url-pattern>
+    </servlet-mapping>
+
+    <!-- View Requests -->
+    <servlet>
+    <servlet-name>ViewRequestsServlet</servlet-name>
+    <servlet-class>com.airtel.servlet.ViewRequestsServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ViewRequestsServlet</servlet-name>
+    <url-pattern>/admin/viewRequests</url-pattern>
+</servlet-mapping>
+   
+   
+    <servlet>
+    <servlet-name>UpdateRequestStatusServlet</servlet-name>
+    <servlet-class>com.airtel.servlet.UpdateRequestStatusServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>UpdateRequestStatusServlet</servlet-name>
+    <url-pattern>/admin/UpdateRequestStatusServlet</url-pattern>
+</servlet-mapping>
+
+    
+
+    <!-- Session Config -->
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+    <!-- Welcome File -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>
